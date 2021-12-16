@@ -6,26 +6,34 @@
 4. Реалізувати метод, що буде масив повертати задом навпаки (Використання Array.Reverse() заборонено!)
 5. Виконати пункт 4 з використанням ключових слів ref i out
 */
-     
+
 using System;
 
 namespace LabOne
 {
     class Program
-    
+
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            //1. Виводить на екран введене число з клавіатури в зворотному порядку (1234->4321)
             Console.WriteLine("1. Виводить на екран введене число з клавіатури в зворотному порядку (1234->4321)");
-            Console.WriteLine(Reverse(1234));
-
+            Console.WriteLine("Введите значение");
+            string a = Console.ReadLine();
+            char[] str1 = a.ToCharArray();
+            Array.Reverse(str1);
+            Console.WriteLine(str1);
+            //2. Виводить будь-яку строку в зворотному порядку (АБВ->ВБА)
             Console.WriteLine("2. Виводить будь-яку строку в зворотному порядку (АБВ->ВБА)");
-            Console.WriteLine(Reverse("АБВ"));
-
+            Console.WriteLine("Введите значение");
+            string b = Console.ReadLine();
+            char[] str2 = b.ToCharArray();
+            Array.Reverse(str2);
+            Console.WriteLine(str2);
+            //3. Дробові числа виводяться в зворотному порядку і ціла частина і дробова (123.456->321.654)
             Console.WriteLine("3. Дробові числа виводяться в зворотному порядку і ціла частина і дробова (123.456->321.654)");
             Console.WriteLine(Reverse(123.456));
-
+            //4. Реалізувати метод, що буде масив повертати задом навпаки використовуючи ref чи out (Використання Array.Reverse() заборонено!)
             Console.WriteLine("4. Реалізувати метод, що буде масив повертати задом навпаки використовуючи ref чи out (Використання Array.Reverse() заборонено!)");
             string[] strArr = { "big", "brown", "fox", "or", "maybe", "even", "bear" };
             int[] intArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 };
